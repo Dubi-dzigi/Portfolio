@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Kontaktujte nás – statická kontaktní stránka</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Jednoduchá statická kontaktní stránka s formulářem a kontaktními údaji.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER / NAV -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="logo">
+        <!-- může být i SVG/logo.png -->
+        <span>Název</span><span>Firmy</span>
+      </a>
+
+      <button class="nav-toggle" aria-label="Otevřít navigaci">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="#sluzby">Služby</a></li>
+          <li><a href="#realizace">Realizace</a></li>
+          <li><a href="#o-nas">O nás</a></li>
+          <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <h1>Zakázkové interiéry na míru vašemu životu</h1>
+        <p>Navrhujeme a realizujeme kuchyně, vestavěné skříně a koupelny, které kombinují čistý design, funkčnost a dlouhou životnost.</p>
+        <div class="hero-actions">
+          <a href="#kontakt" class="btn btn-primary">Nezávazná konzultace</a>
+          <a href="#realizace" class="btn btn-ghost">Prohlédnout realizace</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <!-- background v CSS, sem lze dát fallback <img> -->
+      </div>
+    </div>
+  </section>
+
+  <!-- SLUŽBY -->
+  <section id="sluzby" class="section services">
+    <div class="container">
+      <header class="section-header">
+        <h2>Naše služby</h2>
+        <p>Kompletní realizace interiérů od prvního návrhu až po montáž.</p>
+      </header>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon">K</div>
+          <h3>Kuchyně na míru</h3>
+          <p>Precizně zpracované kuchyňské linky, které respektují prostor i vaše návyky.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">S</div>
+          <h3>Vestavěné skříně</h3>
+          <p>Úložné prostory s chytrým vnitřním uspořádáním pro maximální využití místa.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">B</div>
+          <h3>Koupelny</h3>
+          <p>Moderní koupelny s důrazem na detail, od obkladů po sanitární techniku.</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon">I</div>
+          <h3>Kompletní interiéry</h3>
+          <p>Ucelené řešení interiéru bytu, domu či komerčního prostoru.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- REALIZACE / GALERIE -->
+  <section id="realizace" class="section gallery">
+    <div class="container">
+      <header class="section-header">
+        <h2>Vybrané realizace</h2>
+        <p>Ukázky našich dokončených projektů.</p>
+      </header>
+
+      <div class="gallery-grid">
+        <!-- Každý obrázek: lazy-load + data pro lightbox -->
+        <figure class="gallery-item">
+          <img src="images/realizace-1-small.jpg"
+               data-full="images/realizace-1-large.jpg"
+               alt="Moderní kuchyně na míru"
+               loading="lazy">
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/realizace-2-small.jpg"
+               data-full="images/realizace-2-large.jpg"
+               alt="Vestavěná skříň v ložnici"
+               loading="lazy">
+        </figure>
+        <figure class="gallery-item">
+          <img src="images/realizace-3-small.jpg"
+               data-full="images/realizace-3-large.jpg"
+               alt="Koupelna s walk-in sprchou"
+               loading="lazy">
+        </figure>
+        <!-- další položky... -->
+      </div>
+    </div>
+
+    <!-- LIGHTBOX OVERLAY -->
+    <div class="lightbox" aria-hidden="true">
+      <button class="lightbox-close" aria-label="Zavřít">&times;</button>
+      <img src="" alt="">
+    </div>
+  </section>
+
+  <!-- O NÁS (krátce, kvůli hierarchii) -->
+  <section id="o-nas" class="section about">
+    <div class="container about-inner">
+      <div>
+        <h2>O společnosti</h2>
+        <p>Jsme interiérové studio zaměřené na zakázkové realizace. Spojujeme kvalitní materiály, řemeslnou práci a čistý, nadčasový design.</p>
+      </div>
+      <div class="about-highlights">
+        <div>
+          <h3>Osobní přístup</h3>
+          <p>Každý projekt začíná důkladným pochopením vašich potřeb a prostoru.</p>
+        </div>
+        <div>
+          <h3>Kompletní servis</h3>
+          <p>Od návrhu, vizualizací, výroby až po finální montáž.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KONTAKT -->
+ 
+
+      <div class="contact-info">
+        <div class="contact-box">
+          <h3>Kontaktní údaje</h3>
+          <p>Název firmy</p>
+          <p>Ulice 123, 123 45 Město</p>
+          <p>Tel: <a href="tel:+420123456789">+420 123 456 789</a></p>
+          <p>E-mail: <a href="mailto:info@firma.cz">info@firma.cz</a></p>
+        </div>
+
+        <div class="map-wrapper" id="kontakt">
+          <!-- nahraď vlastní mapou -->
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163930.37332678784!2d14.30087846603379!3d50.059843805048985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b939c0970798b%3A0x400af0f66164090!2sPraha!5e0!3m2!1scs!2scz!4v1772622247074!5m2!1scs!2scz" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; <span id="year"></span> Název firmy. Všechna práva vyhrazena.</p>
+      <a href="#hero">Zpět nahoru</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
